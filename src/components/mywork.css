@@ -1,0 +1,32 @@
+.projects {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  margin: 20px 170px;
+}
+.my_projects {
+  padding: 40px;
+  display: flex;
+  justify-content: space-around;
+  gap: 30px;
+  position: relative;
+  /* margin-left: 30px; */
+}
+.project_one {
+  height: 350px;
+  width: 350px;
+}
+.project_one:hover {
+  border: 2px solid rgb(243, 131, 150);
+  background-image: linear-gradient(rgb(38, 32, 33), rgb(72, 38, 44));
+  transform: scale(1.05);
+  transition: 0.4s;
+}
+.extra {
+  background: linear-gradient(270deg, rgb(241, 114, 182) 80%, orange) 20%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

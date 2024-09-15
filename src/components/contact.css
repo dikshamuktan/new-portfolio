@@ -1,0 +1,46 @@
+.contact {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  height: 100vh;
+  margin: 20px 170px;
+  gap: 50px;
+  justify-content: center;
+}
+.contact-section {
+  display: flex;
+  gap: 30px;
+}
+.contact-left {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.content {
+  background: linear-gradient(270deg, rgb(241, 114, 182) 40%, orange) 60%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.content-start {
+  background: linear-gradient(270deg, rgb(241, 114, 182) 80%, orange) 40%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.message-btn {
+  background: linear-gradient(270deg, rgb(241, 114, 182) 60%, orange) 50%;
+}
+.message-btn:hover {
+  border: 2px solid white;
+  background-image: linear-gradient(rgb(190, 92, 123), rgb(98, 63, 69));
+  transform: scale(1.05);
+  transition: 0.4s;
+}
+
+i {
+  font-size: 30px;
+}
