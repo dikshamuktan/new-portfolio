@@ -1,9 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./navbar.css";
-import { useRef, useState } from "react";
+import "./Navbar.css";
+import { useRef } from "react";
 function Navbar() {
-  const [menu, setMenu] = useState("home");
   const menuRef = useRef();
 
   const openMenu = () => {

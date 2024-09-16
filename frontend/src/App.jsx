@@ -9,13 +9,12 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <div>
       <BrowserRouter>
         <Navbar />
         <Routes>
+          <Route path="/" element={<HomePage />} />
           <Route path="/home" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="projects" element={<Services />} />
