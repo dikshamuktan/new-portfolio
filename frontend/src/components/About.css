@@ -1,0 +1,82 @@
+.aboutpage {
+  height: 100vh;
+  margin: 20px 170px;
+  gap: 50px;
+}
+.about {
+  background: linear-gradient(270deg, rgb(241, 114, 182) 50%, orange) 40%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.skill {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  transition: 0.3s;
+}
+.skill p {
+  min-width: 150px;
+  font-size: 24px;
+  font-family: 500;
+}
+.skill hr {
+  quotes: none;
+  border: none;
+  width: 50%;
+  height: 8px;
+  border-radius: 50px;
+  background: linear-gradient(
+    to right,
+    rgb(209, 139, 151),
+    rgb(214, 92, 214),
+    rgb(38, 35, 31)
+  );
+}
+.download {
+  justify-content: center;
+  color: rgb(217, 133, 147);
+  height: 35px;
+  width: 110px;
+  border-radius: 10px;
+  border: solid rgb(233, 156, 177);
+}
+.skills {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  justify-content: space-between;
+  margin: 10px 100px;
+}
+.box h1 {
+  font-size: 25px;
+}
+
+.box i {
+  font-size: 30px;
+}
+.box h1 {
+  background: linear-gradient(270deg, rgb(241, 114, 182) 80%, orange) 20%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.box hr {
+  background-color: aliceblue;
+}
+.box:hover {
+  /* border: 2px solid rgb(61, 45, 48); */
+  /* background-image: linear-gradient(rgb(38, 32, 33), rgb(72, 38, 44)); */
+  transform: scale(1.05);
+  transition: 0.4s;
+}
+
+@media (max-width: 768px) {
+  .about-top {
+    display: flex;
+    width: 100%;
+  }
+  .aboutpage {
+    margin: 18px 70px;
+  }
+}
