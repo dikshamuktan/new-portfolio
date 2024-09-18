@@ -1,77 +1,173 @@
+import React, { useState } from "react";
+import axios from "axios";
 import "./moreinfo.css";
 
-function MoreInfo() {
-  const onSubmit = async (event) => {
-    event.preventDefault();
-    const formData = new FormData(event.target);
+const MoreInfo = () => {
+  const [user, setUser] = useState({
+    name: "",
+    email: "",
+    number: "",
+    company: "",
+    services: "",
+    message: "",
+  });
 
-    formData.append("access_key", "d2d75bd9-529e-4c0a-b669-4569baf31e24");
+  const servicesList = [
+    "Web Development",
+    "App Development",
+    "Graphic Design",
+    "Marketing",
+  ];
 
-    const object = Object.fromEntries(formData);
-    const json = JSON.stringify(object);
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setUser({
+      ...user,
+      [name]: value,
+    });
+  };
 
-    const res = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-      body: json,
-    }).then((res) => res.json());
+  const handleServiceChange = (e) => {
+    const { value, checked } = e.target;
 
-    if (res.success) {
-      alert(res.message);
-      // console.log("Success", res);
+    if (checked) {
+      setUser({
+        ...user,
+        services: [...user.services, value],
+      });
+    } else {
+      setUser({
+        ...user,
+        services: user.services.filter((service) => service !== value),
+      });
+    }
+  };
+
+  const getRequest = async (e) => {
+    e.preventDefault();
+    console.log(user);
+    try {
+      const req = await axios({
+        url: "http://localhost:8080/api/user/send",
+        method: "post",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        data: user,
+      });
+      setUser({
+        name: "",
+        email: "",
+        number: "",
+        company: "",
+        services: "",
+        message: "",
+      });
+      console.log(req.data);
+    } catch (err) {
+      console.log(err.response?.data);
     }
   };
   return (
-    <div className="moreinfo flex  justify-center items-center gap-20 p-8">
-      <form
-        onSubmit={onSubmit}
-        className="flex flex-col  w-2/5 bg-white p-5 rounded-lg shadow-lg gap-10"
-      >
-        <h1 className="info-top text-5xl font-bold text-center">
-          Company Info
-        </h1>
-        <label>
-          company Name
-          <input
-            className="block w-full p-2 mb-4  rounded outline outline-1 focus:ring focus:border-blue-500"
-            type="text"
-            name="name"
-          />
-        </label>
+    <form
+      className="moreinfo flex  justify-center items-center  "
+      onSubmit={getRequest}
+    >
+      <div className="table flex flex-col  w-2/5 bg-white p-5 rounded-lg shadow-lg gap-5">
+        <div>
+          <p className="info-top text-5xl font-bold text-cente ">Contact us</p>
+          <label>
+            Full Name:
+            <input
+              className="block w-full p-2 mb-2  rounded outline outline-1 focus:ring focus:border-blue-500"
+              type="text"
+              name="name"
+              value={user.name}
+              onChange={handleInputChange}
+              required
+            />
+          </label>
+        </div>
+        <div>
+          <label>
+            Email Address:
+            <input
+              className="block w-full p-2 mb-2  rounded outline outline-1 focus:ring focus:border-blue-500"
+              type="email"
+              name="email"
+              value={user.email}
+              onChange={handleInputChange}
+              required
+            />
+          </label>
+        </div>
+        <div>
+          <label>
+            Pnone Number
+            <input
+              className="block w-full p-2 mb-2  rounded outline outline-1 focus:ring focus:border-blue-500"
+              type="text"
+              name="number"
+              value={user.number}
+              onChange={handleInputChange}
+              required
+            />
+          </label>
+        </div>
+        <div>
+          <label>
+            Company Name:
+            <input
+              className="block w-full p-2 mb-2  rounded outline outline-1 focus:ring focus:border-blue-500"
+              type="text"
+              name="company"
+              value={user.company}
+              onChange={handleInputChange}
+              required
+            />
+          </label>
+        </div>
 
-        <label>
-          Address
-          <input
-            className="block w-full p-2 mb-4  rounded outline outline-1 focus:ring focus:border-blue-500"
+        <div>
+          <h3 className="text-xl font-bold">Select Services:</h3>
+          {servicesList.map((service) => (
+            <div key={service}>
+              <label>
+                <input
+                  type="checkbox"
+                  value={service}
+                  checked={user.services.includes(service)}
+                  onChange={handleServiceChange}
+                />
+                {service}
+              </label>
+            </div>
+          ))}
+        </div>
+        <div className="mt-4">
+          <p className="text-xl font-bold">
+            Tell us something about your project
+          </p>
+
+          <textarea
+            style={{ height: "200px" }}
+            className="messagebox  p-2  border border-black"
+            cols="50"
+            rows="10"
             type="text"
-            name="address"
-          />
-        </label>
-        <label>
-          Email
-          <input
-            className="block w-full p-2 mb-4  rounded outline outline-1 focus:ring focus:border-blue-500"
-            type="text"
-            name="email"
-          />
-        </label>
-        <label>
-          Phone Number
-          <input
-            className="block w-full p-2 mb-4  rounded outline outline-1 focus:ring focus:border-blue-500"
-            type="text"
-            name="phone number"
-          />
-        </label>
-        <button type="submit" className="btn-submit">
-          Submit now
+            name="message"
+            value={user.message}
+            onChange={handleInputChange}
+            required
+            placeholder=" Enter your message"
+          ></textarea>
+        </div>
+        <button className="btn-submit" type="submit">
+          Submit
         </button>
-      </form>
-    </div>
+      </div>
+    </form>
   );
-}
+};
 
 export default MoreInfo;

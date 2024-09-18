@@ -22,13 +22,24 @@
   display: none;
 }
 
-.moreinfo {
-  display: flex;
-  color: black;
-}
 .info-top {
-  background: linear-gradient(270deg, rgb(241, 114, 182) 60%, orange) 20%;
+  background: linear-gradient(270deg, rgb(241, 114, 182) 40%, orange) 50%;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  justify-content: center;
+  text-align: center;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+.table {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+
+  color: black;
 }
