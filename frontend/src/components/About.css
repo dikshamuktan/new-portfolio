@@ -71,6 +71,10 @@
   transition: 0.4s;
 }
 
+.second-img {
+  height: 350px;
+  width: 300px;
+}
 @media (max-width: 768px) {
   .about-top {
     display: flex;
@@ -80,3 +84,23 @@
     margin: 18px 70px;
   }
 }
+
+/* @media (max-width: 540px) {
+  .aboutpage {
+    margin: 10px 10px;
+    display: flex;
+  }
+ 
+  .second-img {
+    width: 250px;
+    height: 350px;
+  }
+  .skill {
+    width: 250px;
+    gap: 0px;
+    display: flex;
+  }
+  .skill p {
+    font-size: 20px;
+  }
+} */

@@ -48,7 +48,7 @@ const MoreInfo = () => {
     console.log(user);
     try {
       const req = await axios({
-        url: "http://localhost:8080/api/user/send",
+        url: "https://new-portfolio-rzgi.vercel.app/api/user/send",
         method: "post",
         headers: {
           "Content-Type": "application/json",

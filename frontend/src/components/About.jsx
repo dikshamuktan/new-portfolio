@@ -9,13 +9,13 @@ function AboutPage() {
         <div>
           <img
             className="second-img"
-            style={{ height: "350px", width: "300px" }}
+            // style={{ height: "350px", width: "300px" }}
             src="./my-img.jpeg"
           />
         </div>
         <div className="about-right flex flex-col gap-5">
           <div>
-            <p>I am an Full Stack Developer</p>
+            <p className="text-xl">I am an Full Stack Developer</p>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem
               ipsum dolor sit amet.
