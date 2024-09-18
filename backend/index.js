@@ -23,6 +23,11 @@ app.use(express.json())
 
 app.use(cors());
 app.use(morgan("tiny"));
+app.get("/",(req,res)=>{
+  res.json({
+    msg:"API Deployment testing s"
+  })
+})
 app.use("/api/user",userRouter)
 
 db.then(() => {
