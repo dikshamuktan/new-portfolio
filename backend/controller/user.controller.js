@@ -1,31 +1,24 @@
 import userModel from "../model/user.model.js";
-import config from "../config/config.js";
 
-export const getUser = async(req,res)=>{
-    try{
-        const findUser= await userModel.findOne({email:req.body.email});
-        console.log(findUser)
-        res.json(findUser)
+export const addUser= async (req, res) => {
+ 
+  try{
+    console.log(req.body)
+   const privioususer= await userModel.findOne({email:req.body.email});
+   if(privioususer){
+   const err= new Error("user email already exist")
+   err.statusCode = 400
+   throw err
 
-    }catch(err){
-        res.status(err?.statusCode || 500).json({ msg: err?.message });
-    }
-}
+   }
+   const saveUser= await userModel.create({
+      ...req.body,
 
-export const addUser= async(req,res)=>{
-    try{
-        const previousUser = await userModel.findOne({
-            name: req.body.name,
-          });
-          if (previousUser) {
-            const err = new Error("COMPANY ALREADY EXISTS");
-            err.statusCode = 400;
-            throw err;
-          }
+   });
 
-      const postCompany= await userModel.create(req.body);
-      res.json(postCompany)
-    }catch(err){
-        res.status(err?.statusCode || 500).json({ msg: err?.message });
-    }
+   res.json(saveUser);
+
+  }catch(err){
+      res.status(err?.statusCode || 500).json({msg:err?.message|| "something went wrong"})
+  };
 };

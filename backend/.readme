@@ -1,0 +1,154 @@
+const MoreInfo = () => {
+  // const [user, setUser] = useState({
+  //   name: "",
+  //   email: "",
+  //   number: "",
+  //   company: "",
+  //   message: "",
+  //   services: "",
+  // });
+
+
+  // List of available services
+  const servicesList = [
+    "Web Development",
+    "App Development",
+    "Graphic Design",
+    "Marketing",
+  ];
+
+  // Handle input change for text fields
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+  // Handle checkbox change for services
+  const handleServiceChange = (e) => {
+    const { value, checked } = e.target;
+
+    if (checked) {
+      // Add service to the list if checked
+      setFormData((prevData) => ({
+        ...prevData,
+        services: [...prevData.services, value],
+      }));
+    } else {
+      // Remove service if unchecked
+      setFormData((prevData) => ({
+        ...prevData,
+        services: prevData.services.filter((service) => service !== value),
+      }));
+    }
+  };
+  // Handle form submission
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Submit formData (you can send it to a backend or display it)
+    console.log("Form Data Submitted: ", formData);
+  };
+  return (
+    <form
+      className="moreinfo flex  justify-center items-center "
+      onSubmit={handleSubmit}
+    >
+      <div className="table flex flex-col  w-2/5 bg-white p-5 rounded-lg shadow-lg gap-10">
+        <div>
+          <p className="info-top text-5xl font-bold text-cente ">Contact us</p>
+          <label>
+            Full Name:
+            <input
+              className="block w-full p-2 mb-2  rounded outline outline-1 focus:ring focus:border-blue-500"
+              type="text"
+              name="name"
+              value={formData.name}
+              onChange={handleInputChange}
+              required
+            />
+          </label>
+        </div>
+        <div>
+          <label>
+            Email Address:
+            <input
+              className="block w-full p-2 mb-2  rounded outline outline-1 focus:ring focus:border-blue-500"
+              type="email"
+              name="email"
+              value={formData.email}
+              onChange={handleInputChange}
+              required
+            />
+          </label>
+        </div>
+        <div>
+          <label>
+            Phone Number:
+            <input
+              className="block w-full p-2 mb-2  rounded outline outline-1 focus:ring focus:border-blue-500"
+              type="text"
+              name="number"
+              value={formData.number}
+              onChange={handleInputChange}
+              required
+            />
+          </label>
+        </div>
+        <div>
+          <label>
+            Company Name:
+            <input
+              className="block w-full p-2 mb-2  rounded outline outline-1 focus:ring focus:border-blue-500"
+              type="text"
+              name="company"
+              value={formData.company}
+              onChange={handleInputChange}
+              required
+            />
+          </label>
+        </div>
+
+        <div className="mt-4 ">
+          <h3 className="text-xl font-bold">Select Services:</h3>
+          {servicesList.map((service) => (
+            <div key={service}>
+              <label>
+                <input
+                  type="checkbox"
+                  value={service}
+                  checked={formData.services.includes(service)}
+                  onChange={handleServiceChange}
+                />
+                {service}
+              </label>
+            </div>
+          ))}
+        </div>
+        <div className="mt-4">
+          <p className="text-xl font-bold">
+            Tell us something about your project
+          </p>
+
+          <textarea
+            style={{ height: "200px" }}
+            className="messagebox  p-2  border border-black"
+            cols="50"
+            rows="10"
+            type="text"
+            name="message"
+            value={formData.message}
+            onChange={handleInputChange}
+            required
+            placeholder=" Enter your message"
+          ></textarea>
+        </div>
+        <button className="btn-submit" type="submit">
+          Submit
+        </button>
+      </div>
+    </form>
+  );
+};
+
+export default MoreInfo;
