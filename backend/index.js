@@ -41,4 +41,4 @@ db.then(() => {
     console.log(`SERVER IS RUNNING AT PORT ${config.PORT}`)
   );
   
-  module.exports = app
+export default  app
