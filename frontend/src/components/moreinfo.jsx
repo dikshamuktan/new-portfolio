@@ -103,7 +103,7 @@ const MoreInfo = () => {
         </div>
         <div>
           <label>
-            Pnone Number
+            Phone Number
             <input
               className="block w-full p-2 mb-2  rounded outline outline-1 focus:ring focus:border-blue-500"
               type="text"
