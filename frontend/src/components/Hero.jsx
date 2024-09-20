@@ -1,9 +1,10 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Hero.css";
 
 const Hero = () => {
   return (
-    <div id="home" className="hero">
+    <div className="hero">
       <img className="rounded-full" src="./my-img.jpeg" />
       <div className="hero-content flex flex-col gap-6">
         <h1 className="big text-5xl font-bold gap-5">
@@ -16,7 +17,9 @@ const Hero = () => {
         </p>
 
         <div className="flex gap-5">
-          <h2 className="hero-connect rounded-full">Connect with me</h2>
+          <Link to="/more-info" className="hero-connect rounded-full">
+            Connect with me
+          </Link>
           <h3 className="hero-resume">My resume</h3>
         </div>
       </div>

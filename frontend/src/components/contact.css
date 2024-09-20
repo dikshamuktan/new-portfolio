@@ -44,9 +44,41 @@
 i {
   font-size: 30px;
 }
+
+.contact-right input {
+  height: 40px;
+  width: 400px;
+}
+textarea {
+  width: 400px;
+}
 @media (max-width: 768px) {
   .contact {
     width: 700px;
     margin: 20px 40px;
+  }
+}
+
+@media (max-width: 640px) {
+  .contact {
+    width: 600px;
+    justify-content: center;
+    align-items: center;
+  }
+  .contact-right {
+    display: flex;
+
+    margin-right: 20px;
+    width: 270px;
+  }
+  .contact-left {
+    width: 250px;
+  }
+  .contact-right input {
+    height: 40px;
+    width: 260px;
+  }
+  textarea {
+    width: 260px;
   }
 }

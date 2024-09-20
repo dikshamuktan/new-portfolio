@@ -15,28 +15,29 @@ function AboutPage() {
         </div>
         <div className="about-right flex flex-col gap-5">
           <div>
-            <p className="text-xl">I am an Full Stack Developer</p>
+            <p className="text-2xl">I am an Full Stack Developer</p>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem
-              ipsum dolor sit amet.
+              I have a strong command over both front-end and back-end
+              technologies, allowing me to build complete and scalable
+              applications.
             </p>
           </div>
           <div className=" flex about-skill gap-5 flex-col">
-            <div className="skill">
+            <div className="skill sm:gap-1 xl:gap-5">
               <p>HTML & CSS</p>
-              <hr style={{ width: "80%" }} />
+              <hr className="first" />
             </div>
-            <div className="skill">
+            <div className="skill sm:gap-1 xl:gap-5">
               <p>JavaScript</p>
-              <hr style={{ width: "40%" }} />
+              <hr className="second" />
             </div>
-            <div className="skill">
+            <div className="skill sm:gap-1 xl:gap-5">
               <p>Node Js</p>
-              <hr style={{ width: "50%" }} />
+              <hr className="third" />
             </div>
-            <div className="skill">
+            <div className="skill sm:gap-1 xl:gap-5">
               <p>React Js</p>
-              <hr style={{ width: "70%" }} />
+              <hr className="forth" />
             </div>
           </div>
         </div>

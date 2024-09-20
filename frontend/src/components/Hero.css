@@ -87,3 +87,21 @@ span {
     text-align: center;
   }
 }
+@media (max-width: 640px) {
+  .hero.img {
+    width: 400px;
+  }
+  .hero-content {
+    width: 400px;
+  }
+}
+
+@media (max-width: 425px) {
+  .hero.img {
+    width: auto;
+  }
+  .hero-content {
+    width: 200px;
+    background-color: pink;
+  }
+}

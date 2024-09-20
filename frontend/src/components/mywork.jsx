@@ -32,9 +32,9 @@ function Services() {
           <p className="text-xl font-bold text-center p-2">To Do's</p>
         </div>
       </div>
-      <div>
+      {/* <div>
         <h1>Tools i use</h1>
-      </div>
+      </div> */}
     </div>
   );
 }

@@ -25,7 +25,7 @@ function Contact() {
     }
   };
   return (
-    <div id="contact" className="contact">
+    <div id="contact" className="contact sm:h-sereen">
       <h1 className="content text-center  text-5xl font-bold ">Get in touch</h1>
       <div className="contact-section">
         <div className="contact-left">
@@ -47,7 +47,7 @@ function Contact() {
             </a>
           </ul>
         </div>
-        <form onSubmit={Submit} className="contact-right">
+        <form onSubmit={Submit} className="contact-right ">
           <div className="bottom-r flex flex-col gap-5">
             <label>
               Your Name <br />
@@ -56,7 +56,7 @@ function Contact() {
                 type="text"
                 name="name"
                 placeholder=" Enter your name"
-                style={{ height: "40px", width: "400px" }}
+                // style={{ height: "40px", width: "400px" }}
               />
             </label>
             <label>
@@ -66,12 +66,12 @@ function Contact() {
                 type="text"
                 name="email"
                 placeholder=" Enter your email"
-                style={{ height: "40px", width: "400px" }}
+                // style={{ height: "40px", width: "400px" }}
               />
             </label>
 
             <textarea
-              style={{ width: "400px" }}
+              // style={{ width: "400px" }}
               className="messagebox bg-black p-2 text-white border border-pink-300"
               cols="100"
               rows="10"
