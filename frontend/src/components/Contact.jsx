@@ -25,8 +25,8 @@ function Contact() {
     }
   };
   return (
-    <div id="contact" className="contact sm:h-sereen">
-      <h1 className="content text-center  text-5xl font-bold ">Get in touch</h1>
+    <div className="contact sm:h-sereen">
+      <h1 className="content text-center   font-bold ">Get in touch</h1>
       <div className="contact-section">
         <div className="contact-left">
           <h2 className="content-start text-4xl font-bold">Let's talk</h2>

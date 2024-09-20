@@ -18,6 +18,7 @@
   height: 350px;
   width: 350px;
 }
+
 .project_one:hover {
   border: 2px solid rgb(243, 131, 150);
   background-image: linear-gradient(rgb(38, 32, 33), rgb(72, 38, 44));
@@ -29,6 +30,10 @@
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  font-size: 50px;
+}
+.big {
+  font-size: 40px;
 }
 
 @media (max-width: 768px) {
@@ -51,5 +56,34 @@
   .projects {
     width: 600px;
     margin: 10px 20px;
+  }
+}
+@media (max-width: 375px) {
+  .projects {
+    width: 300px;
+    margin: 10px 40px;
+  }
+  .extra {
+    font-size: 35px;
+  }
+  .big {
+    font-size: 30px;
+  }
+  /* .project_one {
+    margin-left: 0px;
+    background-color: pink;
+  } */
+
+  .my_projects {
+    width: 300px;
+    margin-right: 30px;
+
+    justify-content: space-around;
+
+    display: flex;
+  }
+  .project-one {
+    width: 100px;
+    height: 300px;
   }
 }

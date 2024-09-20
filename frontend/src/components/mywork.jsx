@@ -5,9 +5,9 @@ function Services() {
   return (
     <div id="projects" className="projects">
       <div>
-        <h3 className="extra text-5xl font-bold">What I Have Done</h3>
+        <h3 className="extra font-bold">What I Have Done</h3>
         <br />
-        <p className="big text-center text-3xl">My Portfolio</p>
+        <p className="big text-center ">My Portfolio</p>
       </div>
       <div className="my_projects">
         <div>

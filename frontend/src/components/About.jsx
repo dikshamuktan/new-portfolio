@@ -5,8 +5,8 @@ function AboutPage() {
   return (
     <div id="about" className="aboutpage  flex flex-col justify-center  ">
       <p className="about text-5xl font-bold text-center  ">About Me</p>
-      <div className="about-top flex gap-10 mt-3  ml-8">
-        <div>
+      <div className="about-top flex  mt-3 ">
+        <div className="about-left">
           <img
             className="second-img"
             // style={{ height: "350px", width: "300px" }}
@@ -22,13 +22,13 @@ function AboutPage() {
               applications.
             </p>
           </div>
-          <div className=" flex about-skill gap-5 flex-col">
+          <div className=" flex about-skill flex-col">
             <div className="skill sm:gap-1 xl:gap-5">
               <p>HTML & CSS</p>
               <hr className="first" />
             </div>
             <div className="skill sm:gap-1 xl:gap-5">
-              <p>JavaScript</p>
+              <p> React Js</p>
               <hr className="second" />
             </div>
             <div className="skill sm:gap-1 xl:gap-5">
@@ -36,7 +36,7 @@ function AboutPage() {
               <hr className="third" />
             </div>
             <div className="skill sm:gap-1 xl:gap-5">
-              <p>React Js</p>
+              <p>JavaScript</p>
               <hr className="forth" />
             </div>
           </div>

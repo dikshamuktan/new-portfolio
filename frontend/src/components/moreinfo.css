@@ -43,3 +43,11 @@ form {
 
   color: black;
 }
+@media (max-width: 375px) {
+  .moreinfo {
+    height: 100%;
+  }
+  .btn-submit {
+    margin-left: 30px;
+  }
+}

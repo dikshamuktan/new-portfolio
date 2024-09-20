@@ -9,6 +9,9 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+.about-skill {
+  gap: 30px;
+}
 .skill {
   display: flex;
   gap: 20px;
@@ -34,16 +37,16 @@
   );
 }
 .first {
-  width: 70%;
+  width: 90%;
 }
 .second {
-  width: 50%;
+  width: 75%;
 }
 .third {
   width: 60%;
 }
 .forth {
-  width: 80%;
+  width: 50%;
 }
 .download {
   justify-content: center;
@@ -82,6 +85,9 @@
   transform: scale(1.05);
   transition: 0.4s;
 }
+.about-top {
+  gap: 40px;
+}
 
 .second-img {
   height: 350px;
@@ -94,6 +100,18 @@
   }
   .aboutpage {
     margin: 18px 70px;
+  }
+  .first {
+    width: 100%;
+  }
+  .second {
+    width: 70%;
+  }
+  .third {
+    width: 50%;
+  }
+  .forth {
+    width: 40%;
   }
 }
 
@@ -119,12 +137,64 @@
     width: 100%;
   }
   .second {
-    width: 30%;
+    width: 35%;
   }
   .third {
-    width: 40%;
+    width: 30%;
   }
   .forth {
-    width: 45%;
+    width: 25%;
+  }
+}
+@media (max-width: 375px) {
+  .aboutpage {
+    height: 100%;
+    width: 300px;
+    margin: 10px 40px;
+  }
+  .about {
+    margin-top: 50px;
+  }
+  .second-img {
+    width: 250px;
+    margin-left: 20px;
+  }
+  .about-left {
+    margin-left: 5px;
+  }
+  .about-right {
+    width: 280px;
+    margin-left: 10px;
+  }
+  .about-top {
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  .about-skill {
+    gap: 5px;
+  }
+  .first {
+    width: 100%;
+  }
+  .second {
+    width: 35%;
+  }
+  .third {
+    width: 30%;
+  }
+  .forth {
+    width: 25%;
+  }
+
+  .skills {
+    width: 300px;
+    margin-left: 4px;
+  }
+  .box {
+    width: 100px;
+  }
+  .box h1 {
+    font-size: 20px;
   }
 }

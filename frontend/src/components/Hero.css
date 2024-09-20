@@ -96,12 +96,19 @@ span {
   }
 }
 
-@media (max-width: 425px) {
-  .hero.img {
-    width: auto;
+@media (max-width: 375px) {
+  .hero {
+    width: 300px;
+    margin: 10px 40px;
+    height: 100%;
   }
   .hero-content {
-    width: 200px;
-    background-color: pink;
+    width: 300px;
+  }
+  .hero-connect {
+    width: 130px;
+  }
+  .hero-resume {
+    width: 130px;
   }
 }
