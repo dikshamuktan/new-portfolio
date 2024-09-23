@@ -56,7 +56,7 @@ function AboutPage() {
           <i className="fa-solid fa-graduation-cap"></i>
 
           <h1>Educaton</h1>
-          <p>Bacholar in Business</p>
+          <p>Bachelor in Business</p>
         </div>
 
         <div className="box">

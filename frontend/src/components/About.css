@@ -137,13 +137,13 @@
     width: 100%;
   }
   .second {
-    width: 35%;
+    width: 40%;
   }
   .third {
-    width: 30%;
+    width: 35%;
   }
   .forth {
-    width: 25%;
+    width: 30%;
   }
 }
 @media (max-width: 375px) {
