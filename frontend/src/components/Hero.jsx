@@ -4,7 +4,7 @@ import "./Hero.css";
 
 const Hero = () => {
   return (
-    <div className="hero">
+    <div className="hero ">
       <img className="rounded-full" src="./my-img.jpeg" />
       <div className="hero-content flex flex-col gap-6">
         <h1 className="big text-5xl font-bold gap-5">

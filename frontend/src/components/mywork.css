@@ -62,6 +62,7 @@
   .projects {
     width: 300px;
     margin: 10px 40px;
+    height: 100%;
   }
   .extra {
     font-size: 35px;
@@ -69,21 +70,15 @@
   .big {
     font-size: 30px;
   }
-  /* .project_one {
-    margin-left: 0px;
-    background-color: pink;
-  } */
 
   .my_projects {
     width: 300px;
-    margin-right: 30px;
-
-    justify-content: space-around;
-
     display: flex;
+    flex-direction: column;
   }
-  .project-one {
-    width: 100px;
+
+  .project_one {
     height: 300px;
+    width: 300px;
   }
 }

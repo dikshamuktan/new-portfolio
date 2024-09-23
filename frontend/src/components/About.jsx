@@ -8,14 +8,14 @@ function AboutPage() {
       <div className="about-top flex  mt-3 ">
         <div className="about-left">
           <img
-            className="second-img"
+            className="second-img object-cover"
             // style={{ height: "350px", width: "300px" }}
             src="./my-img.jpeg"
           />
         </div>
         <div className="about-right flex flex-col gap-5">
           <div>
-            <p className="text-2xl">I am an Full Stack Developer</p>
+            <p className="text-2xl">I am a Full Stack Developer</p>
             <p>
               I have a strong command over both front-end and back-end
               technologies, allowing me to build complete and scalable

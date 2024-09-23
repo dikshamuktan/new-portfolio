@@ -7,7 +7,7 @@ import Contact from "../src/components/Contact";
 
 function Home() {
   return (
-    <div>
+    <div className="overflow-hidden">
       <Hero />
       <AboutPage />
       <Services />
