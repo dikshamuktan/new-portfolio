@@ -92,6 +92,7 @@ span {
 }
 @media (max-width: 425px) {
   .hero {
+    overflow: hidden;
     width: 100%;
     height: 100%;
     justify-content: center;

@@ -117,15 +117,23 @@
 
 @media (max-width: 425px) {
   .aboutpage {
+    overflow: hidden;
     display: flex;
     margin-left: 50px;
-    width: 600px;
+    width: 100%;
     height: 100%;
     margin-top: 100px;
+    margin-left: 80px;
+    align-items: center;
   }
-
+  .about-top {
+    display: flex;
+    gap: 40px;
+    flex-direction: column;
+    align-items: center;
+  }
   .second-img {
-    width: 13rem;
+    width: 20rem;
     height: 350px;
   }
 

@@ -86,3 +86,8 @@
     gap: 30px;
   }
 }
+@media (max-width: 425px) {
+  .nav-open {
+    right: 100px;
+  }
+}
