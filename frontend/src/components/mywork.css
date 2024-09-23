@@ -47,7 +47,7 @@
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 425px) {
   .project_one {
     width: 150px;
     height: 300px;

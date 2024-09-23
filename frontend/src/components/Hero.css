@@ -55,6 +55,9 @@ span {
   cursor: pointer;
 }
 
+.big {
+  font-size: 50px;
+}
 .hero-resume:hover {
   border-color: rgb(196, 91, 156);
 }
@@ -87,9 +90,14 @@ span {
     text-align: center;
   }
 }
-@media (max-width: 640px) {
-  .hero.img {
-    width: 400px;
+@media (max-width: 425px) {
+  .hero {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    margin-left: 100px;
   }
   .hero-content {
     width: 400px;
@@ -110,5 +118,9 @@ span {
   }
   .hero-resume {
     width: 130px;
+  }
+  .hero img {
+    width: 17rem;
+    height: 17rem;
   }
 }

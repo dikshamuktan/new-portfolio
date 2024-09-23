@@ -36,13 +36,16 @@ function Contact() {
             can contact anytime.
           </p>
           <ul className="links flex  gap-4">
-            <a href="https://facebook.com/">
+            <a href="https://www.facebook.com/moktanee.deeksha" target="blank">
               <i className="fa-brands fa-facebook"></i>
             </a>
-            <a href="https://instagram.com/">
+            <a href="https://www.instagram.com/l.diksha/" target="blank">
               <i className="fa-brands fa-instagram"></i>
             </a>
-            <a href="https://linkedin.com/">
+            <a
+              href="https://www.linkedin.com/in/diksha-muktan-62a233317/"
+              target="blank"
+            >
               <i className="fa-brands fa-linkedin"></i>
             </a>
           </ul>
