@@ -52,6 +52,7 @@ function Contact() {
         </div>
         <form onSubmit={Submit} className="contact-right ">
           <div className="bottom-r flex flex-col gap-5">
+            <h2 className="top text-4xl font-bold">Contact Me</h2>
             <label>
               Your Name <br />
               <input
@@ -72,15 +73,17 @@ function Contact() {
                 // style={{ height: "40px", width: "400px" }}
               />
             </label>
-
-            <textarea
-              // style={{ width: "400px" }}
-              className="messagebox bg-black p-2 text-white border border-pink-300"
-              cols="100"
-              rows="10"
-              name="message"
-              placeholder=" Enter your message"
-            ></textarea>
+            <label>
+              Message <br></br>
+              <textarea
+                // style={{ width: "400px" }}
+                className="messagebox bg-black p-2 text-white border border-pink-300"
+                cols="100"
+                rows="10"
+                name="message"
+                placeholder=" Enter your message"
+              ></textarea>
+            </label>
             <button
               type="submit"
               className="message-btn rounded-lg text-white"

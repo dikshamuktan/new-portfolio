@@ -49,8 +49,8 @@
 
 @media (max-width: 425px) {
   .projects {
-    width: 600px;
-    margin: 10px 20px;
+    width: 410px;
+    margin: 10px 10px;
     height: 100%;
     justify-content: center;
   }

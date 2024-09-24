@@ -96,10 +96,22 @@
 @media (max-width: 768px) {
   .about-top {
     display: flex;
-    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .about-right {
+    width: 500px;
+    margin-left: 60px;
+  }
+  .second-img {
+    height: 400px;
+    width: 300px;
+    margin-left: 150px;
+    margin-top: 20px;
   }
   .aboutpage {
     margin: 18px 70px;
+    height: 100%;
   }
   .first {
     width: 100%;
@@ -117,14 +129,9 @@
 
 @media (max-width: 425px) {
   .aboutpage {
-    overflow: hidden;
-    display: flex;
-    margin-left: 50px;
-    width: 100%;
     height: 100%;
-    margin-top: 100px;
-    margin-left: 80px;
-    align-items: center;
+    width: 400px;
+    margin: 10px 10px;
   }
   .about-top {
     display: flex;
@@ -133,10 +140,17 @@
     align-items: center;
   }
   .second-img {
-    width: 20rem;
+    width: 18rem;
     height: 350px;
+    margin-left: 10px;
   }
-
+  .about {
+    margin-top: 100px;
+  }
+  .skills {
+    width: 400px;
+    margin-left: 10px;
+  }
   .skill p {
     font-size: 20px;
   }
@@ -159,7 +173,7 @@
 @media (max-width: 375px) {
   .aboutpage {
     height: 100%;
-    width: 300px;
+    width: 310px;
     margin: 10px 40px;
   }
   .about {
@@ -167,17 +181,16 @@
   }
   .second-img {
     width: 15rem;
-    margin-left: 20px;
+    margin-left: 10px;
   }
-  .about-left {
+  /* .about-left {
     margin-left: 5px;
-  }
+  } */
   .about-right {
     width: 280px;
     margin-left: 10px;
   }
   .about-top {
-    gap: 20px;
     display: flex;
     flex-direction: column;
   }
@@ -198,11 +211,11 @@
   }
 
   .skills {
-    width: 300px;
-    margin-left: 4px;
+    display: flex;
+    width: 280px;
   }
   .box {
-    width: 100px;
+    width: 90px;
   }
   .box h1 {
     font-size: 20px;

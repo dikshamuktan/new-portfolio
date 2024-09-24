@@ -5,8 +5,12 @@
   align-items: center;
 }
 .nav-connect {
-  padding: 10px 15px;
+  height: 50px;
+  width: 180px;
   border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: linear-gradient(
     to right,
     rgb(241, 123, 188) 55%,
@@ -84,10 +88,5 @@
     padding-left: 100px;
     flex-direction: column;
     gap: 30px;
-  }
-}
-@media (max-width: 425px) {
-  .nav-open {
-    right: 100px;
   }
 }
