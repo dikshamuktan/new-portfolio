@@ -1,16 +1,14 @@
 .hero {
   display: flex;
-  align-items: center;
   flex-direction: column;
-  gap: 50px;
-  margin: 20px 170px;
+
+  align-items: center;
+  text-align: center;
   height: 100vh;
 }
 .hero img {
-  margin-top: 40px;
   height: 300px;
   width: 300px;
-  /* margin-bottom: 110px; */
 }
 span {
   background: linear-gradient(270deg, rgb(241, 114, 182) 80%, orange) 20%;
@@ -67,7 +65,64 @@ span {
   justify-content: center;
   align-items: center;
 }
-@media (max-width: 768px) {
+
+/* Mobile screens */
+@media (max-width: 640px) {
+  .hero {
+    margin-top: 30px;
+    gap: 30px;
+  }
+
+  h1.big {
+    font-size: 1.5rem;
+  }
+
+  .hero-mid {
+    font-size: 1.25rem;
+  }
+
+  .hero-connect,
+  .hero-resume {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+}
+
+/* Tablets */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .hero-content {
+    text-align: center;
+  }
+
+  h1.big {
+    font-size: 3.5rem;
+  }
+
+  .hero-mid {
+    font-size: 1.5rem;
+  }
+}
+
+/* Laptops and Desktops */
+@media (min-width: 1025px) {
+  .hero {
+    gap: 30px;
+    align-items: center;
+    text-align: left;
+  }
+
+  .hero-content {
+    max-width: 70%;
+    text-align: left;
+  }
+
+  .hero-connect,
+  .hero-resume {
+    font-size: 1rem;
+  }
+}
+
+/* @media (max-width: 768px) {
   .hero.img {
     width: 250px;
     margin-bottom: 30px;
@@ -92,22 +147,7 @@ span {
     text-align: center;
   }
 }
-@media (max-width: 425px) {
-  .hero {
-    height: 100%;
-    display: flex;
-    margin-left: 10px;
-    width: 410px;
-  }
-  .hero-content {
-    width: 400px;
-  }
-  .hero img {
-    width: 20rem;
-    height: 20rem;
-    align-items: centere;
-  }
-}
+
 
 @media (max-width: 375px) {
   .hero {
@@ -129,4 +169,4 @@ span {
     width: 17rem;
     height: 17rem;
   }
-}
+} */

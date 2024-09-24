@@ -7,7 +7,7 @@ const Hero = () => {
     <div className="hero ">
       <img className="rounded-full" src="./my-img.jpeg" />
       <div className="hero-content flex flex-col gap-6">
-        <h1 className="big text-5xl font-bold gap-5">
+        <h1 className="big text-5xl font-bold gap-5 leading-none md:gap-8">
           <span>
             I'm <br /> Diksha Muktan,
             <br />

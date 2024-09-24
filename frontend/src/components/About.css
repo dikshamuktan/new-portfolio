@@ -1,8 +1,3 @@
-.aboutpage {
-  height: 100vh;
-  margin: 20px 170px;
-  gap: 50px;
-}
 .about {
   background: linear-gradient(270deg, rgb(241, 114, 182) 50%, orange) 40%;
   background-clip: text;
@@ -56,13 +51,7 @@
   border-radius: 10px;
   border: solid rgb(233, 156, 177);
 }
-.skills {
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-  justify-content: space-between;
-  margin: 10px 100px;
-}
+
 .box h1 {
   font-size: 25px;
 }
@@ -84,140 +73,4 @@
   /* background-image: linear-gradient(rgb(38, 32, 33), rgb(72, 38, 44)); */
   transform: scale(1.05);
   transition: 0.4s;
-}
-.about-top {
-  gap: 40px;
-}
-
-.second-img {
-  height: 350px;
-  width: 300px;
-}
-@media (max-width: 768px) {
-  .about-top {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .about-right {
-    width: 500px;
-    margin-left: 60px;
-  }
-  .second-img {
-    height: 400px;
-    width: 300px;
-    margin-left: 150px;
-    margin-top: 20px;
-  }
-  .aboutpage {
-    margin: 18px 70px;
-    height: 100%;
-  }
-  .first {
-    width: 100%;
-  }
-  .second {
-    width: 70%;
-  }
-  .third {
-    width: 50%;
-  }
-  .forth {
-    width: 40%;
-  }
-}
-
-@media (max-width: 425px) {
-  .aboutpage {
-    height: 100%;
-    width: 400px;
-    margin: 10px 10px;
-  }
-  .about-top {
-    display: flex;
-    gap: 40px;
-    flex-direction: column;
-    align-items: center;
-  }
-  .second-img {
-    width: 18rem;
-    height: 350px;
-    margin-left: 10px;
-  }
-  .about {
-    margin-top: 100px;
-  }
-  .skills {
-    width: 400px;
-    margin-left: 10px;
-  }
-  .skill p {
-    font-size: 20px;
-  }
-  .about-right {
-    width: 300px;
-  }
-  .first {
-    width: 100%;
-  }
-  .second {
-    width: 40%;
-  }
-  .third {
-    width: 35%;
-  }
-  .forth {
-    width: 30%;
-  }
-}
-@media (max-width: 375px) {
-  .aboutpage {
-    height: 100%;
-    width: 310px;
-    margin: 10px 40px;
-  }
-  .about {
-    margin-top: 50px;
-  }
-  .second-img {
-    width: 15rem;
-    margin-left: 10px;
-  }
-  /* .about-left {
-    margin-left: 5px;
-  } */
-  .about-right {
-    width: 280px;
-    margin-left: 10px;
-  }
-  .about-top {
-    display: flex;
-    flex-direction: column;
-  }
-  .about-skill {
-    gap: 5px;
-  }
-  .first {
-    width: 100%;
-  }
-  .second {
-    width: 35%;
-  }
-  .third {
-    width: 30%;
-  }
-  .forth {
-    width: 25%;
-  }
-
-  .skills {
-    display: flex;
-    width: 280px;
-  }
-  .box {
-    width: 90px;
-  }
-  .box h1 {
-    font-size: 20px;
-  }
 }
