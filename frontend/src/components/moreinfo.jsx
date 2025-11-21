@@ -43,7 +43,7 @@ const MoreInfo = () => {
     }
   };
 
-  const getRequest = async (e) => {
+  const postRequest = async (e) => {
     e.preventDefault();
     console.log(user);
     try {
@@ -71,7 +71,7 @@ const MoreInfo = () => {
   return (
     <form
       className="moreinfo flex  justify-center items-center   "
-      onSubmit={getRequest}
+      onSubmit={postRequest}
     >
       <div className="table flex-col  w-2/5 bg-white rounded-lg shadow-lg gap-5">
         <div className="m-3">

@@ -4,26 +4,28 @@ import "./Hero.css";
 
 const Hero = () => {
   return (
-    <div className="hero ">
-      <img className="rounded-full" src="./my-img.jpeg" />
-      <div className="hero-content flex flex-col gap-6">
-        <h1 className="big text-5xl font-bold gap-5 leading-none md:gap-8">
-          <span>
-            I'm <br /> Diksha Muktan,
-            <br />
-          </span>
-          full-stack developer based in Nepal.
-        </h1>
+    <div className="hero bg-yellow-50 w-full h-screen">
+      <div className="relative container mx-auto flex h-full">
+        {/* LEFT TEXT SECTION */}
+        <div className="w-1/2 flex flex-col justify-center items-center overflow-hidden text-gray-700 ">
+          <div className="absolute left-16 z-10">
+            <h1 className="text-[70px] font-bold">Hi I'm</h1>
+            <p className="text-[80px] font-bold tracking-wider">
+              DIKSHA MUK<span className="text-white">TAN</span>
+            </p>
+            <p className="text-2xl  font-medium tracking-wider">
+              FULL STACK DEVELOPER
+            </p>
+          </div>
+        </div>
 
-        <p className="hero-mid text-2xl">
-          I am a full-stack developer from Hetauda, Nepal
-        </p>
-
-        <div className="flex gap-5">
-          <Link to="/more-info" className="hero-connect rounded-full">
-            Connect with me
-          </Link>
-          <h3 className="hero-resume">My resume</h3>
+        {/* RIGHT IMAGE OR BOX SECTION */}
+        <div className="w-1/2 relative flex items-end bg-purple-400 justify-center">
+          {/* <img
+            className="absolute right-20 rounded- bottom-[230px] w-full h-full object-cover"
+            src="./diksha.jpeg"
+            alt="Diksha"
+          /> */}
         </div>
       </div>
     </div>

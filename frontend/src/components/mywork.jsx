@@ -1,83 +1,77 @@
-// import React from "react";
-// import "./mywork.css";
-
-// function Services() {
-//   return (
-//     <div id="projects" className="projects">
-//       <div>
-//         <h3 className="extra font-bold">What I Have Done</h3>
-//         <br />
-//         <p className="big text-center ">My Portfolio</p>
-//       </div>
-//       <div className="my_projects">
-//         <div>
-//           <img
-//             className="project_one"
-//             src="https://images.pexels.com/photos/956999/milky-way-starry-sky-night-sky-star-956999.jpeg?auto=compress&cs=tinysrgb&w=800"
-//           />
-//           <p className="text-xl font-bold text-center p-2">Project ABC</p>
-//         </div>
-//         <div>
-//           <img
-//             className="project_one"
-//             src="https://images.pexels.com/photos/370799/pexels-photo-370799.jpeg?auto=compress&cs=tinysrgb&w=800"
-//           />
-//           <p className="text-xl font-bold text-center p-2">Real time chat</p>
-//         </div>
-//         <div>
-//           <img
-//             className="project_one"
-//             src="https://images.pexels.com/photos/1114690/pexels-photo-1114690.jpeg?auto=compress&cs=tinysrgb&w=800"
-//           />
-//           <p className="text-xl font-bold text-center p-2">To Do's</p>
-//         </div>
-//       </div>
-//       {/* <div>
-//         <h1>Tools i use</h1>
-//       </div> */}
-//     </div>
-//   );
-// }
-// export default Services;
-
 import React from "react";
 import "./mywork.css";
 
 function Services() {
   return (
-    <div id="projects" className="projects px-4 md:px-8 lg:px-16 py-8">
-      <div className="text-center mb-8">
-        <h3 className="extra font-bold text-3xl md:text-5xl">
-          What I Have Done
-        </h3>
-        <br />
-        <p className="big text-center text-xl md:text-3xl">My Portfolio</p>
-      </div>
-
-      <div className="my_projects  grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div>
-          <img
-            className="project_one w-full h-80   object-cover rounded-lg"
-            src="https://images.pexels.com/photos/956999/milky-way-starry-sky-night-sky-star-956999.jpeg?auto=compress&cs=tinysrgb&w=800"
-            alt="Project ABC"
-          />
-          <p className="text-xl font-bold text-center p-2">Project ABC</p>
+    <div
+      id="projects"
+      className="bg-purple-400 w-full h-[600px] justify-center flex "
+    >
+      <div className="container flex flex-col px-20 mt-16">
+        <div className="text-5xl flex-col gap-5 flex tracking-wider font-extrabold">
+          <h1>
+            TOOLS AND
+            {/* <span className="text-gray-700">OO</span> */}
+          </h1>
+          <p className="">SYSTEM</p>
         </div>
-        <div>
-          <img
-            className="project_one w-full h-80 object-cover rounded-lg"
-            src="https://images.pexels.com/photos/370799/pexels-photo-370799.jpeg?auto=compress&cs=tinysrgb&w=800"
-            alt="Real time chat"
-          />
-          <p className="text-xl font-bold text-center p-2">Real time chat</p>
-        </div>
-        <div>
-          <img
-            className="project_one w-full h-80 object-cover rounded-lg"
-            src="https://images.pexels.com/photos/1114690/pexels-photo-1114690.jpeg?auto=compress&cs=tinysrgb&w=800"
-            alt="To Do's"
-          />
-          <p className="text-xl font-bold text-center p-2">To Do's</p>
+        <div className="flex justify-between w-full">
+          <div className="flex flex-col gap-2 items-center">
+            <img
+              className="h-[80px] w-[80px] rounded-full object-cover mt-12"
+              src="./react.png"
+              alt="React"
+            />
+            <p className="text-2xl">REACT</p>
+          </div>
+          <div className="flex flex-col gap-2 items-center">
+            <img
+              className="h-[80px] w-[80px] rounded-full object-cover mt-12"
+              src="./html.png"
+              alt="Html"
+            />
+            <p className="text-2xl">HTML</p>
+          </div>
+          <div className="flex flex-col gap-2 items-center">
+            <img
+              className="h-[80px] w-[80px] rounded-full object-cover mt-12"
+              src="./css.png"
+              alt="Css"
+            />
+            <p className="text-2xl">CSS</p>
+          </div>
+          <div className="flex flex-col gap-2 items-center">
+            <img
+              className="h-[80px] w-[80px] rounded-full object-cover mt-12"
+              src="./js.png"
+              alt="Js"
+            />
+            <p className="text-2xl">JS</p>
+          </div>
+          <div className="flex flex-col gap-2 items-center">
+            <img
+              className="h-[80px] w-[80px] rounded-full object-cover mt-12"
+              src="./node.png"
+              alt="Diksha"
+            />
+            <p className="text-2xl">NODE</p>
+          </div>
+          <div className="flex flex-col gap-2 items-center">
+            <img
+              className="h-[80px] w-[80px] rounded-full object-cover mt-12"
+              src="./mongo.png"
+              alt="Mongo db"
+            />
+            <p className="text-2xl">Mongo db</p>
+          </div>
+          <div className="flex flex-col gap-2 items-center">
+            <img
+              className="h-[80px] w-[80px] rounded-full object-cover mt-12"
+              src="./github.png"
+              alt="Github"
+            />
+            <p className="text-2xl">Git hub</p>
+          </div>
         </div>
       </div>
     </div>

@@ -12,11 +12,8 @@ function Navbar() {
     menuRef.current.style.right = "-350px";
   };
   return (
-    <div className="navbar ">
-      <div className="logo ">
-        <i className="fa-brands fa-dropbox"></i>
-        Diksha Muktan
-      </div>
+    <div className="fixed h-16 w-full z-20 bg-gray-700 flex justify-center items-center ">
+      {/* <div className="logo text-2xl">Diksha Muktan</div> */}
       <div onClick={openMenu}>
         <i className="nav-open fa-solid fa-bars"></i>
       </div>
@@ -32,9 +29,9 @@ function Navbar() {
       </ul>
 
       <div>
-        <Link to="more-info" className="nav-connect">
+        {/* <Link to="more-info" className="nav-connect">
           Connect With Me
-        </Link>
+        </Link> */}
       </div>
     </div>
   );

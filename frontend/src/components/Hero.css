@@ -10,12 +10,12 @@
   height: 300px;
   width: 300px;
 }
-span {
+/* span {
   background: linear-gradient(270deg, rgb(241, 114, 182) 80%, orange) 20%;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-}
+} */
 
 .hero-me {
   display: flex;

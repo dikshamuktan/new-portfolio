@@ -1,4 +1,4 @@
-.about {
+/* .about {
   background: linear-gradient(270deg, rgb(241, 114, 182) 50%, orange) 40%;
   background-clip: text;
   -webkit-background-clip: text;
@@ -21,7 +21,6 @@
 .skill hr {
   quotes: none;
   border: none;
-  /* width: 50%; */
   height: 8px;
   border-radius: 50px;
   background: linear-gradient(
@@ -69,8 +68,13 @@
   background-color: aliceblue;
 }
 .box:hover {
-  /* border: 2px solid rgb(61, 45, 48); */
-  /* background-image: linear-gradient(rgb(38, 32, 33), rgb(72, 38, 44)); */
   transform: scale(1.05);
   transition: 0.4s;
+} */
+
+.uniq {
+  font-family: "Rubik 80s Fade", system-ui;
+}
+.simple {
+  font-family: "Nunito", sans-serif;
 }
