@@ -9,10 +9,8 @@ function Services() {
     >
       <div className="container flex flex-col px-20 mt-16">
         <div className="text-5xl flex-col gap-5 flex tracking-wider font-extrabold">
-          <h1>
-            TOOLS AND
-            {/* <span className="text-gray-700">OO</span> */}
-          </h1>
+          <h1>TOOLS AND</h1>
+
           <p className="">SYSTEM</p>
         </div>
         <div className="flex justify-between w-full">
