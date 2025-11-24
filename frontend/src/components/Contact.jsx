@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import "./contact.css";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 function Contact() {
   const Submit = async (event) => {
     event.preventDefault();
@@ -20,81 +23,66 @@ function Contact() {
     }).then((res) => res.json());
 
     if (res.success) {
-      alert(res.message);
-      // console.log("Success", res);
+      toast.success(res.message);
+      event.target.reset();
+    } else {
+      toast.error("Something went wrong!");
     }
   };
+
   return (
-    <div className="contact sm:h-sereen">
-      <h1 className="content text-center   font-bold ">Get in touch</h1>
-      <div className="contact-section">
-        <div className="contact-left">
-          <h2 className="content-start text-4xl font-bold">Let's talk</h2>
-          <p className="text-xl">
-            I'm currently available to take on new projects, so feel free to
-            send me a massage about anything that you want me to work on. you
-            can contact anytime.
-          </p>
-          <ul className="links flex  gap-4">
-            <a href="https://www.facebook.com/moktanee.deeksha" target="blank">
-              <i className="fa-brands fa-facebook"></i>
-            </a>
-            <a href="https://www.instagram.com/l.diksha/" target="blank">
-              <i className="fa-brands fa-instagram"></i>
-            </a>
-            <a
-              href="https://www.linkedin.com/in/diksha-muktan-62a233317/"
-              target="blank"
-            >
-              <i className="fa-brands fa-linkedin"></i>
-            </a>
-          </ul>
-        </div>
-        <form onSubmit={Submit} className="contact-right ">
-          <div className="bottom-r flex flex-col gap-5">
-            <h2 className="top text-4xl font-bold">Contact Me</h2>
-            <label>
-              Your Name <br />
+    <div className="relative bg-gray-700 flex justify-center py-16">
+      <div className="container flex flex-col items-center justify-center px-6 gap-6">
+        <h1 className="text-white text-5xl font-extrabold mb-4">Contact Me</h1>
+
+        <form
+          onSubmit={Submit}
+          className="bg-white rounded-xl shadow-2xl p-10 w-full max-w-xl"
+        >
+          <div className="flex flex-col gap-6 w-full">
+            <label className="w-full">
+              <span className="font-semibold text-gray-700">Your Name</span>
               <input
-                className="bg-black rounded text-white p-2 border border-pink-300"
+                className="mt-1 w-full bg-gray-700 text-white p-3 rounded-lg border"
                 type="text"
                 name="name"
-                placeholder=" Enter your name"
-                // style={{ height: "40px", width: "400px" }}
+                placeholder="Enter your name"
               />
             </label>
-            <label>
-              Your Email <br />
+
+            <label className="w-full">
+              <span className="font-semibold text-gray-700">Your Email</span>
               <input
-                className="bg-black rounded text-white p-2 border border-pink-300"
-                type="text"
+                className="mt-1 w-full bg-gray-700 text-white p-3 rounded-lg border"
+                type="email"
                 name="email"
-                placeholder=" Enter your email"
-                // style={{ height: "40px", width: "400px" }}
+                placeholder="Enter your email"
               />
             </label>
-            <label>
-              Message <br></br>
+
+            <label className="w-full">
+              <span className="font-semibold text-gray-700">Message</span>
               <textarea
-                // style={{ width: "400px" }}
-                className="messagebox bg-black p-2 text-white border border-pink-300"
-                cols="100"
-                rows="10"
+                className="mt-1 w-full bg-gray-700 text-white p-3 rounded-lg border"
+                rows="6"
                 name="message"
-                placeholder=" Enter your message"
+                placeholder="Enter your message"
               ></textarea>
             </label>
+
             <button
               type="submit"
-              className="message-btn rounded-lg text-white"
-              style={{ width: "120px", height: "50px" }}
+              className="mt-4 bg-gray-700 hover:bg-gray-800 transition-all duration-200 text-white font-semibold py-3 rounded-lg w-40 mx-auto shadow-lg"
             >
               Send Message
             </button>
           </div>
         </form>
       </div>
+
+      <ToastContainer position="top-right" autoClose={2000} />
     </div>
   );
 }
+
 export default Contact;

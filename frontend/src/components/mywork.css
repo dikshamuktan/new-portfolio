@@ -12,12 +12,7 @@
   justify-content: space-around;
   gap: 30px;
   position: relative;
-  /* margin-left: 30px; */
 }
-/* .project_one {
-  height: 350px;
-  width: 350px;
-} */
 
 .project_one:hover {
   border: 2px solid rgb(243, 131, 150);
@@ -34,56 +29,137 @@
 .big {
   font-size: 40px;
 }
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  animation: spin 5s infinite linear;
+}
+.card {
+  flex: 0 0 5rem;
+  height: 5em;
+  padding: 1em;
+  background: blue;
+  font-size: 3rem;
+  border-radius: 2em;
+  text-align: center;
+  align-content: center;
+  padding-right: 1em;
+}
 
-/* @media (max-width: 768px) {
-  .project_one {
-    width: 200px;
-    height: 350px;
-  }
-  .projects {
-    width: 700px;
-    margin: 10px 40px;
-  }
-} */
+.carousel {
+  margin: 100px auto;
+  width: 90%;
+  border: 5px solid red;
+  display: flex;
+  overflow-x: auto;
+}
 
-/* @media (max-width: 425px) {
-  .projects {
-    width: 410px;
-    margin: 10px 10px;
-    height: 100%;
-    justify-content: center;
+@keyframes spin {
+  form {
+    translate: 0;
   }
-  .project_one {
-    height: 300px;
-    width: 350px;
+  to {
+    translate: -100%;
   }
-  .my_projects {
-    width: 300px;
-    display: flex;
-    flex-direction: column;
-  }
-} */
-/* @media (max-width: 375px) {
-  .projects {
-    width: 300px;
-    margin: 10px 40px;
-    height: 100%;
-  }
-  .extra {
-    font-size: 35px;
-  }
-  .big {
-    font-size: 30px;
-  } */
+}
+.slider {
+  width: 100%;
+  border: 1 px solid red;
+  height: var(--height);
+}
 
-/* .my_projects {
-    width: 300px;
-    display: flex;
-    flex-direction: column;
-  } */
+.slider .list {
+  display: flex;
+}
 
-/* .project_one {
-    height: 300px;
-    width: 300px;
-  }
-} */
+/* 
+import React from "react";
+import "./mywork.css";
+
+function Services() {
+  const TechItem = ({ src, label }) => {
+    return (
+      <div className="group flex flex-col items-center min-w-[120px] h-[150px] ">
+        <div className="h-[80px] w-[80px] flex items-center justify-center">
+          <img
+            className="h-full w-full rounded-full object-cover"
+            src={src}
+            alt={label}
+          />
+        </div>
+
+        <p className="text-xl text-gray-700">{label}</p>
+      </div>
+    );
+  };
+  const TechItem2 = ({ src, label }) => {
+    return (
+      <div
+        aria-hidden
+        className="group flex flex-col items-center min-w-[120px] h-[150px] "
+      >
+        <div className="h-[80px] w-[80px] flex items-center justify-center">
+          <img
+            className="h-full w-full rounded-full object-cover"
+            src={src}
+            alt={label}
+          />
+        </div>
+
+        <p className="text-xl text-gray-700">{label}</p>
+      </div>
+    );
+  };
+  const techData = [
+    { src: "./react.png", label: "React" },
+    { src: "./html.png", label: "HTML" },
+    { src: "./css.png", label: "CSS" },
+    { src: "./js.png", label: "JS" },
+    { src: "./node.png", label: "Node" },
+    { src: "./mongo.png", label: "Mongo DB" },
+    { src: "./github.png", label: "GitHub" },
+    { src: "./nextjs.svg", label: "Next js" },
+    { src: "./figma.png", label: "figma" },
+  ];
+  const techData2 = [
+    { src: "./react.png", label: "React" },
+    { src: "./html.png", label: "HTML" },
+    { src: "./css.png", label: "CSS" },
+    { src: "./js.png", label: "JS" },
+    { src: "./node.png", label: "Node" },
+    { src: "./mongo.png", label: "Mongo DB" },
+    { src: "./github.png", label: "GitHub" },
+  ];
+  return (
+    <div
+      id="projects"
+      className="bg-purple-300 w-full h-[500px] justify-center flex  "
+    >
+      <div className="container flex flex-col px-20 mt-20 gap-6">
+        <div className="text-[50px] text-gray-700 flex-col gap-5 flex tracking-wider font-extrabold">
+          <h1>
+            T<span className="text-white">OO</span>LS AND <br /> SY
+            <span className="text-white">S</span>TE
+            <span className="text-white">M</span>
+          </h1>
+        </div>
+
+        <div className="scrollbar-hide w-full overflow-x-auto flex mt-4 gap-5">
+          {techData.map((item, index) => (
+            <TechItem key={index} src={item.src} label={item.label} />
+          ))}
+          {techData2.map((item, index) => (
+            <TechItem2 key={index} src={item.src} label={item.label} />
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default Services; */

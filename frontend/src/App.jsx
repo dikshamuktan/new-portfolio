@@ -8,6 +8,7 @@ import Contact from "./components/Contact";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
+import Projects from "./components/projects";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="projects" element={<Services />} />
           <Route path="contact" element={<Contact />} />
           <Route path="/more-info" element={<MoreInfo />} />
+          <Route path="/projects" element={<Projects />} />
         </Routes>
       </BrowserRouter>
     </div>
