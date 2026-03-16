@@ -9,11 +9,24 @@ import Projects from "../src/components/projects";
 function Home() {
   return (
     <div className="overflow-hidden">
-      <Hero />
-      <AboutPage />
-      <Services />
-      <Projects />
-      <Contact />
+      <section id="home">
+        <Hero />
+      </section>
+
+      <section id="about">
+        <AboutPage />
+      </section>
+
+      <section id="projects">
+        <Projects />
+      </section>
+
+      <section>
+        <Services />
+      </section>
+      <section id="contact">
+        <Contact />
+      </section>
     </div>
   );
 }

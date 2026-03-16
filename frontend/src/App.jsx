@@ -18,11 +18,11 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/home" element={<HomePage />} />
-          <Route path="/about" element={<AboutPage />} />
+          {/* <Route path="/about" element={<AboutPage />} />
           <Route path="projects" element={<Services />} />
           <Route path="contact" element={<Contact />} />
           <Route path="/more-info" element={<MoreInfo />} />
-          <Route path="/projects" element={<Projects />} />
+          <Route path="/projects" element={<Projects />} /> */}
         </Routes>
       </BrowserRouter>
     </div>

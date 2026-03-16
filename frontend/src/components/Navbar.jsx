@@ -21,10 +21,10 @@ function Navbar() {
       <ul ref={menuRef} className="nav-menu">
         <i onClick={closeMenu} className="nav-close fa-solid fa-xmark"></i>
         <li>
-          <Link to="home">Home</Link>
-          <Link to="about">About</Link>
-          <Link to="projects">Projects</Link>
-          <Link to="contact">Contact</Link>
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
         </li>
       </ul>
 

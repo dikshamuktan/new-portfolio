@@ -58,7 +58,7 @@ function Services() {
   return (
     <div
       id="projects"
-      className="bg-purple-300 w-full h-[500px] justify-center flex  "
+      className="bg-purple-400 w-full h-[500px] justify-center flex  "
     >
       <div className="container flex flex-col px-20 mt-20 gap-6">
         <div className="text-[50px] text-gray-700 flex-col gap-5 flex tracking-wider font-extrabold">
