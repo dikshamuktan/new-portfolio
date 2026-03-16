@@ -5,9 +5,9 @@ export default function Projects() {
         <h1 className="text-[50px] font-extrabold text-gray-700">Projects</h1>
         <div className="flex justify-between w-full">
           <a
-            href="https://pronexa.swivt.io/"
-            target="_blank"
-            rel="noopener noreferrer"
+          // href="https://pronexa.swivt.io/"
+          // target="_blank"
+          // rel="noopener noreferrer"
           >
             <div className="relative rounded-md h-[350px] w-[280px] overflow-hidden">
               <div className="hover:scale-105 transition-transform h-full overflow-hidden">
